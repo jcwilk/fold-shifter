@@ -1,0 +1,60 @@
+{
+  "name": "fold-shifter",
+  "displayName": "fold_shifter",
+  "description": "Hoteys for shifting the Unison fold up and down",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:fold-shifter.moveDividerUp",
+    "onCommand:fold-shifter.moveDividerDown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fold-shifter.moveDividerUp",
+        "title": "Move Divider Up"
+      },
+      {
+        "command": "fold-shifter.moveDividerDown",
+        "title": "Move Divider Down"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "fold-shifter.moveDividerUp",
+        "key": "ctrl+shift+[",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "fold-shifter.moveDividerDown",
+        "key": "ctrl+shift+]",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}
