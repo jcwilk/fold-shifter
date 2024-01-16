@@ -5,6 +5,7 @@ WORK IN PROGRESS - just uploading the rough version for now so folks can peek if
 Move the `---` fold up or down in Unison scratch files.
 
 `ctrl-shift-[` to move it up or create it from the bottom
+
 `ctrl-shift-]` to move it down or create it from the top or remove it from the bottom
 
 ## Features
